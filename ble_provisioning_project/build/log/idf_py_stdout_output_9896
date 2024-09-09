@@ -1,0 +1,19 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Vinay\esp\ble_provisioning_project\build\bootloader\esp-idf\esptool_py && C:\Users\Vinay\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Vinay/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Vinay/esp/ble_provisioning_project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+C:/Users/Vinay/esp/ble_provisioning_project/main/app_main.c: In function 'app_main':
+C:/Users/Vinay/esp/ble_provisioning_project/main/app_main.c:323:9: warning: unused variable 'uuid128' [-Wunused-variable]
+  323 | uint8_t uuid128[] = {0xb4, 0xdf, 0x5a, 0x1c, 0x3f, 0x6b, 0xf4, 0xbf,
+      |         ^~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable wifi_prov_mgr.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Vinay/esp/ble_provisioning_project/build/wifi_prov_mgr.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Vinay\esp\ble_provisioning_project\build\esp-idf\esptool_py && C:\Users\Vinay\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Vinay/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Vinay/esp/ble_provisioning_project/build/partition_table/partition-table.bin C:/Users/Vinay/esp/ble_provisioning_project/build/wifi_prov_mgr.bin"
+wifi_prov_mgr.bin binary size 0x10a2b0 bytes. Smallest app partition is 0x140000 bytes. 0x35d50 bytes (17%) free.

@@ -1,0 +1,18 @@
+[1/5] cmd.exe /C "cd /D C:\Users\Vinay\esp\ble_provisioning_project\build\esp-idf\esptool_py && C:\Users\Vinay\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Vinay/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Vinay/esp/ble_provisioning_project/build/partition_table/partition-table.bin C:/Users/Vinay/esp/ble_provisioning_project/build/wifi_prov_mgr.bin"
+wifi_prov_mgr.bin binary size 0x10a2b0 bytes. Smallest app partition is 0x140000 bytes. 0x35d50 bytes (17%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Vinay\esp\ble_provisioning_project\build\bootloader\esp-idf\esptool_py && C:\Users\Vinay\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/Vinay/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Vinay/esp/ble_provisioning_project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Vinay\esp\esp-idf\components\esptool_py && C:\Users\Vinay\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Vinay/esp/esp-idf -D SERIAL_TOOL=C:/Users/Vinay/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/Vinay/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Vinay/esp/ble_provisioning_project/build -P C:/Users/Vinay/eesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_prov_mgr.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port COM3
+
+A fatal error occurred: Could not open COM3, the port is busy or doesn't exist.
+(could not open port 'COM3': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2))
+
+Hint: Check if the port is correct and ESP connected
+
+sp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+FAILED: CMakeFiles/flash C:/Users/Vinay/esp/ble_provisioning_project/build/CMakeFiles/flash 
+cmd.exe /C "cd /D C:\Users\Vinay\esp\esp-idf\components\esptool_py && C:\Users\Vinay\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/Vinay/esp/esp-idf -D SERIAL_TOOL=C:/Users/Vinay/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/Vinay/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Vinay/esp/ble_provisioning_project/build -P C:/Users/Vinay/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.
